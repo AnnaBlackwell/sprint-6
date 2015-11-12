@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tic-tac-toe</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style>
+      .board {
+        border: 1px solid #eee;
+        margin: 50px auto;
+        width: 300px;
+      }
+
+      .e,
+      .o,
+      .x {
+        border: 1px solid #eee;
+        float: left;
+        font-size: 80px;
+        font-weight: bold;
+        height: 98px;
+        line-height: 98px;
+        text-align: center;
+        width: 98px;
+      }
+
+      .o { color: ForestGreen; }
+      .x { color: DarkRed; }
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <div id="board">
+        <div class="board">
+          <div class="ttt-cell empty" data-index="0">&nbsp;</div>
+          <div class="ttt-cell empty" data-index="1">&nbsp;</div>
+          <div class="ttt-cell empty" data-index="2">&nbsp;</div>
+          <div class="ttt-cell empty" data-index="3">&nbsp;</div>
+          <div class="ttt-cell empty" data-index="4">&nbsp;</div>
+          <div class="ttt-cell empty" data-index="5">&nbsp;</div>
+          <div class="ttt-cell empty" data-index="6">&nbsp;</div>
+          <div class="ttt-cell empty" data-index="7">&nbsp;</div>
+          <div class="ttt-cell empty" data-index="8">&nbsp;</div>
+        </div>
+      </div>
+    </div>
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>
+      System.import('app/main.js')
+    </script>
+  </body>
+</html>
