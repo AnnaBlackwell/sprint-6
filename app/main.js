@@ -4,10 +4,6 @@ import { filter, addIndex, indexOf, map, append, contains } from 'ramda'
 
 import $ from 'jquery'
 
-var board = ['', '', '', '', '', '', '', '', '']
-
-const winner = ['X', 'O', 'X', 'O', 'X', '', 'X', '', 'O',]
-
 const isAWin = function (board, player, win) {
   return filter((i) => board[i] === player, win).length === 3
 }
@@ -61,7 +57,6 @@ board.setAttribute('class', 'board')
 board.innerHTML = makeBoard([4, 3, 0, 8, 2, 1, 6]).join('')
 
 const renderBoard = function (cells) {
-  var board = document.createElement('div')
 
   board.setAttribute('class', 'board')
   board.innerHTML = cells
@@ -71,12 +66,21 @@ const renderBoard = function (cells) {
 
 renderBoard(makeBoard([]).join(''))
 
-const makeMove = function (cell, moves) {
-  if (contains(cell, moves)) {
-    return moves
-  } else {
-    return append(cell, moves)
-  }
+
+const makeMove = function (e) {
+  var cells = $('.board > div')
+
+  console.log(cells.index(e.target))
 }
 
-$('#board').on('click', '.ttt-cell', (e) => console.log(e))
+$('#board').on('click', '.ttt-cell', makeMove)
+
+const played = function (el) {
+  return $(el).html() !== ''
+  console.log('Cell played? ' + played(e.target))
+}
+
+const whoMovesNow = function (cells) {
+  const n = cells.filter((idx, el) => played(el)).length
+  return (n % 2 === 0) ? 'x' : 'o'
+}
