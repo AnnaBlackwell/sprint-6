@@ -1,4 +1,3 @@
-// in app/tic-tac-toe.js
 import $ from 'jquery'
 
 const played = function (el) {
