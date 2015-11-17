@@ -1,4 +1,4 @@
- How I plan to address accessibility requirements in general, and specifically media-related issues, on your personal website. What sorts of media might you include? How will you make them accessible to everyone? What level of conformance—A, AA, or AAA—do you think you can achieve?
+ How I plan to address accessibility requirements in general, and specifically media-related issues, on your personal website.
 
 The website that I have been planning throughout phase zero would primarily be text and image-based. I can't imagine needing to include videos or audio. In this site, ARIA attributes and alt text for images should be used throughout. The site will also include maps with pins to indicate locations. These could be given alternative text with physical addresses to make these maps more accessible.
 
